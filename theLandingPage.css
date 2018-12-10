@@ -1,12 +1,3 @@
-/* #LOGO {
-    color: white;
-    position: absolute;
-    z-index: 4;
-    margin-left: 45%;
-    margin-right: 28%;
-    top: 345px;
-} */
-
 .Anders {
     position:absolute;
     color: lightgray;
@@ -15,13 +6,24 @@
     align-content: left;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 80%;
+    line-height:.5;
     z-index: 7;
+    /* ANIMATIONS */
+    animation: ak;
+    animation-duration: 3s;
+   
 }
+
+@keyframes ak{
+    0%      {left: -150%}
+    100%    {left: 0%}
+}
+
 
 .Lori {
     color: lightgray;
     position: relative;
-    margin-top: 62%;
+    margin-top: 68%;
     margin-right: 2%;
     float: right;
     text-align: right;
@@ -30,8 +32,22 @@
     vertical-align: bottom;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 80%;
+    line-height:.5;
     z-index: 8;
+     /* ANIMATIONS */
+     animation: ld;
+     animation-duration: 3s;
 }
+
+/* ANIMATIONS */
+@keyframes ld{
+    0%      {right: -150%}
+    100%    {right: 0%}
+}
+
+
+
+
 
 img {
     position: absolute;
@@ -57,14 +73,7 @@ body{
 }
 
  
-/* .box1:hover{
-  transition-property: all;
-  transition-duration: 5s;
-  transition-timing-function: ease-in;
-  transform: rotateY(360deg);
-  animation-iteration-count: 3;
-  animation-fill-mode: forwards;
-}  */
+
 
 .box2 {
     background: chartreuse;
@@ -99,14 +108,6 @@ body{
     transform: rotate(45deg);
 }
 
-/* .box3:hover{
-    transition-property: all;
-    transition-duration: 5s;
-    transition-timing-function: ease-in;
-    transform: rotateY(360deg);
-    animation-iteration-count: 3;
-    animation-fill-mode: forwards;
-  } */
 
 .triangle-topright{  
         width: 0;
@@ -118,14 +119,6 @@ body{
         transform: rotate(270deg); 
 }
 
-/* .triangle-topright:hover{ */
-    /* background: orange; */
-    /* border-radius: 50%; */
-    /* transition-property: all;
-    transition-duration: 5s;
-    transition-timing-function: ease-in;
-    transform: rotateY(360deg);
-  } */
 
 .triangle-bottomleft {
         width: 0;
@@ -141,6 +134,44 @@ body{
           
 }
 
+
+
+/* 
+  UNUSED CODE: */
+
+  /* #LOGO {
+    color: white;
+    position: absolute;
+    z-index: 4;
+    margin-left: 45%;
+    margin-right: 28%;
+    top: 345px;
+} */
+
+
+/* .box1:hover{
+  transition-property: all;
+  transition-duration: 5s;
+  transition-timing-function: ease-in;
+  transform: rotateY(360deg);
+  animation-iteration-count: 3;
+  animation-fill-mode: forwards;
+}  */
+
+/* .box3:hover{
+    transition-property: all;
+    transition-duration: 5s;
+    transition-timing-function: ease-in;
+    transform: rotateY(360deg);
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+  } */
+
+
+
+
+
+
 /* .triangle-topright:hover{
     /* background: orange; */
     /* border-radius: 50%; */
@@ -149,3 +180,12 @@ body{
     transition-timing-function: ease-in;
     transform: rotateY(360deg);
   } */ 
+
+  /* .triangle-topright:hover{ */
+    /* background: orange; */
+    /* border-radius: 50%; */
+    /* transition-property: all;
+    transition-duration: 5s;
+    transition-timing-function: ease-in;
+    transform: rotateY(360deg);
+  } */
