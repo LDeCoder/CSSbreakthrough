@@ -72,8 +72,6 @@ body{
     transform: rotate(35deg);
 }
 
- 
-
 
 .box2 {
     background: chartreuse;
@@ -114,7 +112,7 @@ body{
         height: 0;
         position: absolute;
         z-index: 2;
-        border-top: 600px solid rgb(112, 116, 113);
+        border-top: 600px solid rgb(71, 72, 72);
         border-left: 600px solid transparent;
         transform: rotate(270deg); 
 }
@@ -129,10 +127,36 @@ body{
         margin-left: 30%;
         margin-top: 10%;
         /* vertical-align: bottom; */
-        border-bottom: 600px solid rgb(112, 116, 113);
+        border-bottom: 600px solid rgb(71, 72, 72);
         border-left: 600px solid transparent;
           
 }
+
+/* ANIMATIONS */
+
+.btn {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    /* padding: 1rem, 2rem; */
+    border: chartreuse 1px solid;
+    position: absolute;
+    align-content: center;    
+    z-index: 9;
+    margin-top: 50%;
+    margin-left: 40%;
+    opacity: 1;
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn{
+    0%      {opacity: 0}
+    100%    {opacity: 100}
+}
+
 
 
 
@@ -189,3 +213,21 @@ body{
     transition-timing-function: ease-in;
     transform: rotateY(360deg);
   } */
+
+
+
+/* .triangles { 
+    animation-name: triangles;
+    animation-duration: 5s; */
+    /* animation-delay: 5s; */
+    /* animation-fill-mode: forwards; */
+    /* transition-property: transform; */
+    /* transition-duration: 3s; */
+    /* transform: rotateY(360deg); */
+/* } */
+
+/* @keyframes triangles{
+    0%      {opacity: 0}
+    100%    {opacity: 1}
+
+} */
