@@ -1,5 +1,6 @@
+
 .Anders {
-    position:absolute;
+    position:fixed;
     color: lightgray;
     margin: 0;
     margin-left: 2%;
@@ -7,7 +8,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 80%;
     line-height:.5;
-    z-index: 7;
+    z-index: 5;
     /* ANIMATIONS */
     animation: ak;
     animation-duration: 3s;
@@ -21,19 +22,19 @@
 
 
 .Lori {
-    color: lightgray;
     position: relative;
-    margin-top: 68%;
+    color: lightgray;
+    margin-top: 63%;
+    bottom: 0;
     margin-right: 2%;
     float: right;
     text-align: right;
-    /* align-content: right;
-    justify-content: right; */
-    vertical-align: bottom;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 80%;
     line-height:.5;
-    z-index: 8;
+    z-index: 4;
+    vertical-align: bottom;
+     
      /* ANIMATIONS */
      animation: ld;
      animation-duration: 3s;
@@ -48,70 +49,97 @@
 
 
 
+/* ****************added 360 animation******************* */
 
 img {
     position: absolute;
-    z-index: 6;
+    z-index: 3;
+    top: 0;
     margin-left: 23%;
-    margin-right: 50%;
-    margin-top: 25%;
+    margin-right: 47%;
+    margin-top: 25%; 
+    animation: img;
+    /* animation-delay: 3s; */
+    animation-duration: 10s;
+}
+
+@keyframes img{ 
+    0%      {transform:rotateY(360deg)}
 }
 
 body{
     background-color: gainsboro;
 }
 
+
+/* ******************made boxes responsive***************** */
+.box1:before{
+    width: 50%;
+}
 .box1 {
     background: rgb(112, 116, 113);
     width: 50%;
+    /* height: 400px; */
     padding-bottom: 50%;
     position: absolute;
-    z-index: 3;
+    z-index: -3;
     margin-left: 25%;
     top: 20%;
     transform: rotate(35deg);
 }
 
+.box1:after{
+    display: block;
+    padding-bottom: 100%;
+}
+ 
 
+  .box2:before{
+    width: 50%;
+}
 .box2 {
     background: chartreuse;
     width: 50%;
     padding-bottom:50%;
     /* height: 50%; */
     position: absolute;
-    z-index: 4;
+    z-index: -2;
     margin-left: 25%;
     top: 20%;
     transform: rotate(40deg);
 }
 
-.box2:hover{
-    transition-property: all;
-    transition-duration: 5s;
-    transition-timing-function: ease-in;
-    transform: rotateY(360deg);
-    animation-iteration-count: 3;
-    animation-fill-mode: forwards;
-  }
+.box2:after{
+    display: block;
+    padding-bottom: 100%;
+}
 
+.box3:before{
+    width: 50%;
+}
 .box3 {
     background: lightgray;
     width: 50%;
     padding-bottom: 50%;
-    /* height: 50%; */
     position: absolute;
-    z-index: 5;
+    z-index: -1;
     margin-left: 25%;
     top: 20%;
     transform: rotate(45deg);
+}
+
+.box3:after{
+    display: block;
+    padding-bottom: 100%;
 }
 
 
 .triangle-topright{  
         width: 0;
         height: 0;
-        position: absolute;
-        z-index: 2;
+        position: fixed;
+        top: 0;
+        z-index: -4;
         border-top: 600px solid rgb(71, 72, 72);
         border-left: 600px solid transparent;
         transform: rotate(270deg); 
@@ -121,34 +149,38 @@ body{
 .triangle-bottomleft {
         width: 0;
         height: 0;
-        /* align-content: right; */
-        position: absolute;
-        z-index: 1;
-        margin-left: 30%;
-        margin-top: 10%;
-        /* vertical-align: bottom; */
+        padding: 10px;
+        position: fixed;
+        z-index: -5;
+        bottom: 0;
+        right: 0;
         border-bottom: 600px solid rgb(71, 72, 72);
-        border-left: 600px solid transparent;
-          
+        border-left: 600px solid transparent;         
 }
 
 /* ANIMATIONS */
 
+/* ****************comes in invisible then fades in ******************* */
 .btn {
     display: inline-block;
-    color: black;
+    color: rgb(112, 116, 113);
+    opacity: 0;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 3%;
+    font-size: medium;
+    font-family: cursive;
     text-decoration: none;
-    /* padding: 1rem, 2rem; */
-    border: chartreuse 1px solid;
+    padding: 1rem, 2rem;
     position: absolute;
     align-content: center;    
-    z-index: 9;
-    margin-top: 50%;
-    margin-left: 40%;
-    opacity: 1;
-    animation-name: btn;
-    animation-duration: 3s;
-    animation-delay: 3s;
+    z-index: 2;
+    margin-top: 43%;
+    margin-left: 28%;
+/* ANIMATION */
+    animation: btn;
+    animation-delay: 4s;
+    animation-duration: 5s; 
     animation-fill-mode: forwards;
 }
 
@@ -160,74 +192,3 @@ body{
 
 
 
-/* 
-  UNUSED CODE: */
-
-  /* #LOGO {
-    color: white;
-    position: absolute;
-    z-index: 4;
-    margin-left: 45%;
-    margin-right: 28%;
-    top: 345px;
-} */
-
-
-/* .box1:hover{
-  transition-property: all;
-  transition-duration: 5s;
-  transition-timing-function: ease-in;
-  transform: rotateY(360deg);
-  animation-iteration-count: 3;
-  animation-fill-mode: forwards;
-}  */
-
-/* .box3:hover{
-    transition-property: all;
-    transition-duration: 5s;
-    transition-timing-function: ease-in;
-    transform: rotateY(360deg);
-    animation-iteration-count: 3;
-    animation-fill-mode: forwards;
-  } */
-
-
-
-
-
-
-/* .triangle-topright:hover{
-    /* background: orange; */
-    /* border-radius: 50%; */
-    /* transition-property: all;
-    transition-duration: 5s;
-    transition-timing-function: ease-in;
-    transform: rotateY(360deg);
-  } */ 
-
-  /* .triangle-topright:hover{ */
-    /* background: orange; */
-    /* border-radius: 50%; */
-    /* transition-property: all;
-    transition-duration: 5s;
-    transition-timing-function: ease-in;
-    transform: rotateY(360deg);
-  } */
-
-
-
-/* .triangles { 
-    animation-name: triangles;
-    animation-duration: 5s; */
-    /* animation-delay: 5s; */
-    /* animation-fill-mode: forwards; */
-    /* transition-property: transform; */
-    /* transition-duration: 3s; */
-    /* transform: rotateY(360deg); */
-/* } */
-
-/* @keyframes triangles{
-    0%      {opacity: 0}
-    100%    {opacity: 1}
-
-} */
